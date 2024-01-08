@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "5dbeff98-383b-40c0-bfbc-558a3ff79e37",
+		"name": "Teste de integração Exact Sales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14648377"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4a127a929f3004de3e055c0376a69c249727a9fd7dcd661fd5c46c63c789dad5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fulano de Tal\",\r\n    \"email\": \"email@teste.com\",\r\n    \"gender\": \"Male\",\r\n    \"status\": \"Active\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v1/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7599180c99d5de5c4bda2a7ca5a4f859894039eeadb6ac82ce5518b6e4df44e8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Novo Fulano de Tal\",\r\n    \"email\": \"novoemail@teste.com\",\r\n    \"gender\": \"Female\",\r\n    \"status\": \"Active\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v1/users/5900339",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v1",
+						"users",
+						"5900339"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
